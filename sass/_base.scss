@@ -1,0 +1,57 @@
+@use "_functions" as *;
+
+$default-font-color: #000;
+$background-color: #4a90e2;
+$container-bgcolor: #f2f2f2;
+$container-bordercolor: #000;
+$textbox-bordercolor: lightgray;
+$button-textcolor: #fff;
+$add-button-color: #4caf50;
+$clear-button-color: #9f6060;
+
+$boxshadow: rem(4) rem(2) rem(5) #000;
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-size: rem(16);
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: $default-font-color;
+  width: 100%;
+  min-height: 100%;
+  @include mq(768px) {
+    font-size: rem(24);
+  }
+}
+
+body {
+  padding: rem(20);
+  background-color: $background-color;
+}
+
+section {
+  background-color: $container-bgcolor;
+  width: 90%;
+  max-width: 700px;
+  margin: auto;
+  border: rem(1) solid $container-bordercolor;
+  border-radius: rem(10);
+}

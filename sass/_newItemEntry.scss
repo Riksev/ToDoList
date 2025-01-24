@@ -1,0 +1,41 @@
+@use "_functions" as *;
+
+.newItemEntry {
+  position: sticky;
+  top: 0px;
+  margin-bottom: rem(16);
+  padding: rem(12);
+
+  form {
+    display: flex;
+    justify-content: space-between;
+
+    label {
+      position: absolute;
+      left: -10000px;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      font-size: rem(20);
+      border: rem(2) solid $textbox-bordercolor;
+      border-radius: rem(10);
+      padding: rem(12);
+      outline: none;
+
+      &:hover,
+      &:focus {
+        box-shadow: $boxshadow;
+      }
+    }
+
+    button {
+      font-size: rem(20);
+      background-color: $add-button-color;
+      padding: rem(12);
+      @include mq(768px) {
+        font-size: rem(24);
+      }
+    }
+  }
+}

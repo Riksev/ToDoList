@@ -1,0 +1,54 @@
+@use "_functions" as *;
+
+.listContainer {
+  min-height: 60vh;
+  padding: rem(12);
+
+  .listTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    button {
+      font-size: rem(16);
+      background-color: $clear-button-color;
+      padding: 0 rem(1.6);
+      margin-bottom: rem(8);
+      @include mq(768px) {
+        padding: 0 rem(8);
+      }
+    }
+
+    hr {
+      width: 100%;
+    }
+  }
+
+  .item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: rem(16);
+
+    input[type="checkbox"] {
+      text-align: center;
+      min-width: rem(48);
+      min-height: rem(48);
+      cursor: pointer;
+      margin-right: rem(24);
+
+      &:focus + label {
+        text-decoration: underline;
+      }
+    }
+
+    label {
+      font-size: rem(17.6);
+    }
+  }
+
+  .confirmation {
+    position: absolute;
+    left: -10000px;
+  }
+}

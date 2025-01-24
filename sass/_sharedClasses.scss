@@ -1,0 +1,21 @@
+@use "_functions" as *;
+
+.button {
+  width: 15%;
+  min-width: rem(48);
+  min-height: rem(48);
+  color: $button-textcolor;
+  border: rem(2) solid $textbox-bordercolor;
+  border-radius: rem(10);
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover,
+  &:focus {
+    filter: brightness(120%);
+    box-shadow: $boxshadow;
+  }
+}
