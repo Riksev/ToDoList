@@ -47,8 +47,8 @@ const updatePersistentData = (listArray) => {
 
 const updateScreenReaderConfirmation = (newEntryText, actionVerb) => {
   document.getElementById(
-    ("confirmation".textContent = `${newEntryText} ${actionVerb}.`)
-  )
+    "confirmation"
+  ).textContent = `${newEntryText} ${actionVerb}.`
 }
 
 const getLabelText = (checkboxId) => {
